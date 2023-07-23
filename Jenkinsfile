@@ -23,7 +23,7 @@ pipeline {
             steps{
                 script{
                    withCredentials([string(credentialsId: 'dockerHubPwd', variable: 'dockerHubPwd')]) {
-                   sh 'docker login -u ray -p ${dockerHubPwd}'
+                   sh 'docker login -u rcodeur -p ${dockerHubPwd}'
                   }
 
                   sh 'docker push gestions-exceptions/sa-backend'
